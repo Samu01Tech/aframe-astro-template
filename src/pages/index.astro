@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Scene from "../components/Scene.astro";
+---
+
+<BaseLayout>
+	<Fragment slot="head">
+		<script src="../scripts/change-color.js"></script>
+	</Fragment>
+    <Scene>
+		<Fragment slot="assets">
+			<img id="picture" src="https://images.unsplash.com/photo-1716903904403-20a28f5afb88?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Astro logo" />
+		</Fragment>
+		<a-plane src="#picture" position="0 3 -5" rotation="0 0 0" width="3" height="3"></a-plane>
+		<a-box change-color position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+		<a-text position="-0.5 1.25 -5" color="#EF2D5E" value="I'm a text"></a-text>
+		<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+		<a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+		<a-sky color="#ECECEC"></a-sky>
+	</Scene>
+</BaseLayout>
